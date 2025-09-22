@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 import Header from "@/components/Header";
+import { Toaster } from "@/components/ui/sonner";
 
 
 const poppins = Poppins({
@@ -34,6 +35,7 @@ export default function RootLayout({
         >
           <Header />
           <main className="container mx-auto p-8">{children}</main>
+          <Toaster duration={3000} position="top-center" richColors />
         </ThemeProvider>
       </body>
     </html>
